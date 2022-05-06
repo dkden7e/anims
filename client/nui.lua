@@ -124,7 +124,7 @@ RegisterNUICallback('fetchStorage', function(data, cb)
             Play.Walk({style = savedWalk}, p)
             local result = Citizen.Await(p)
             if result.passed then
-                Play.Notification('info', 'Set old walk style back.')
+                Play.Notification('info', 'Restablecer el estilo de caminar.')
             end
         end
     end
@@ -160,7 +160,7 @@ RegisterCommand(cfg.commandNameEmote, function(_, args)
     if args and args[1] then
         return findEmote(args[1])
     end
-    Play.Notification('info', 'No emote name set...')
+    Play.Notification('info', 'No se ha establecido ningún nombre para esta animación...')
 end)
 
 RegisterCommand(cfg.defaultCommand, function()

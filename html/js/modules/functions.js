@@ -101,7 +101,7 @@ export const changeInfo = (type, titleM, descM) => {
         title.textContent = titleM;
         desc.textContent = descM;
     } else {
-        title.textContent = 'Info';
-        desc.textContent = 'Display info about certain buttons and icons.'
+        title.textContent = 'Información';
+        desc.textContent = 'Mostrar información sobre ciertas botones e iconos.'
     }
 }

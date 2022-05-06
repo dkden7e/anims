@@ -28,14 +28,14 @@ This project does not contain a license, therefore you are not allowed to add on
 - Everything has to be translated manually because I did not want to support different languages with a locales config. However, I will list every line that can be translated.
 
 **LUA**
-- [105 | client/nui.lua]
-- [141 | client/nui.lua]
-- [82 | client/functions.lua]
-- [163 | client/functions.lua]
-- [13-14 | server/syncing.lua]
+- [105 | client/nui.lua];
+- [141 | client/nui.lua];
+- [82 | client/functions.lua];
+- [163 | client/functions.lua];
+- [13-14 | server/syncing.lua];
 
 **JS**
-- [22-33 | html/js/script.js]
-- [6-102 | html/js/listeners.js]
-- [88-89 | html/js/modules/fetch.js]
-- [104-105 | html/js/modules/functions.js]
+- [22-33 | html/js/script.js];
+- [6-102 | html/js/listeners.js];
+- [88-89 | html/js/modules/fetch.js];
+- [104-105 | html/js/modules/functions.js];

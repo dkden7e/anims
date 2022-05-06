@@ -19,22 +19,22 @@ window.addEventListener('load', (e) => {
                     if (panelEmote.toLowerCase() == e.data.name.toLowerCase()) {
                         fetchNUI('beginAnimation', {dance: JSON.parse(panels[i].getAttribute('data-dances')), scene: JSON.parse(panels[i].getAttribute('data-scenarios')), expression: JSON.parse(panels[i].getAttribute('data-expressions')), walk: JSON.parse(panels[i].getAttribute('data-walks')), prop: JSON.parse(panels[i].getAttribute('data-props')), particle: JSON.parse(panels[i].getAttribute('data-particles')), shared: JSON.parse(panels[i].getAttribute('data-shared')), disableMovement: JSON.parse(panels[i].getAttribute('data-disableMovement')), disableLoop: JSON.parse(panels[i].getAttribute('data-disableLoop'))}).then((resp) => {
                             if (resp.e == 'nearby') {
-                                fetchNUI('sendNotification', {type: 'info', message: 'No one nearby...'})
+                                fetchNUI('sendNotification', {type: 'info', message: 'No hay nadie cerca...'})
                             } else {
                                 (resp.e)
-                                ? fetchNUI('sendNotification', {type: 'success', message: 'Animation executed!'})
-                                : fetchNUI('sendNotification', {type: 'error', message: 'Animation could not load!'});
+                                ? fetchNUI('sendNotification', {type: 'success', message: 'Animación ejecutada!'})
+                                : fetchNUI('sendNotification', {type: 'error', message: 'La animación no se pudo ejecutar!'});
                             }
                             return;
                         })
                         return;
                     }
                 }
-                fetchNUI('sendNotification', {type: 'info', message: 'Animation was not found...'})
+                fetchNUI('sendNotification', {type: 'info', message: 'La animación no se pudo encontrar...'})
             break;
 
             default:
-                console.log('Something did not load properly when sending a message')
+                console.log('Algo no se cargo correctamente cuando se envío el mensaje')
             break;
         }
     })

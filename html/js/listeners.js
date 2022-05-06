@@ -3,15 +3,15 @@ import { fetchNUI } from "./modules/fetch.js"
 
 const doc = document;
 
-doc.getElementById('home').addEventListener('mouseover', _ => changeInfo(true, 'home', 'Show all animations.'));
+doc.getElementById('home').addEventListener('mouseover', _ => changeInfo(true, 'home', 'Mostrar todas las animaciones.'));
 doc.getElementById('home').addEventListener('mouseleave', _ => changeInfo(false));
 doc.getElementById('home').addEventListener('click', e => changeClass(e.target));
 
-doc.getElementById('settings').addEventListener('mouseover', _ => changeInfo(true, 'settings', 'Show the animation menu settings.'));
+doc.getElementById('settings').addEventListener('mouseover', _ => changeInfo(true, 'settings', 'Mostrar la configuración del menú de animaciones.'));
 doc.getElementById('settings').addEventListener('mouseleave', _ => changeInfo(false));
 doc.getElementById('settings').addEventListener('click', e => changeClass(e.target));
 
-doc.getElementById('exit').addEventListener('mouseover', _ => changeInfo(true, 'exit', 'Close the animation menu.'));
+doc.getElementById('exit').addEventListener('mouseover', _ => changeInfo(true, 'exit', 'Cerrar el menú de animaciones.'));
 doc.getElementById('exit').addEventListener('mouseleave', _ => changeInfo(false));
 doc.getElementById('exit').addEventListener('click', e => {
     changeClass(doc.getElementById('home'));
@@ -25,31 +25,31 @@ doc.addEventListener('keyup', e => {
     }
 })
 
-doc.getElementById('favorite').addEventListener('mouseover', _ => changeInfo(true, 'favorites', 'Show your bookmarked animations.'));
+doc.getElementById('favorite').addEventListener('mouseover', _ => changeInfo(true, 'favorites', 'Mostrar tus animaciones favoritas.'));
 doc.getElementById('favorite').addEventListener('mouseleave', _ => changeInfo(false));
 doc.getElementById('favorite').addEventListener('click', e => changeClass(e.target));
 
-doc.getElementById('dances').addEventListener('mouseover', _ => changeInfo(true, 'dances', 'Show dancing animations.'));
+doc.getElementById('dances').addEventListener('mouseover', _ => changeInfo(true, 'dances', 'Mostrar animaciones de baile.'));
 doc.getElementById('dances').addEventListener('mouseleave', _ => changeInfo(false));
 doc.getElementById('dances').addEventListener('click', e => changeClass(e.target));
 
-doc.getElementById('props').addEventListener('mouseover', _ => changeInfo(true, 'props', 'Show props animations.'));
+doc.getElementById('props').addEventListener('mouseover', _ => changeInfo(true, 'props', 'Mostrar objetos.'));
 doc.getElementById('props').addEventListener('mouseleave', _ => changeInfo(false));
 doc.getElementById('props').addEventListener('click', e => changeClass(e.target));
 
-doc.getElementById('scenarios').addEventListener('mouseover', _ => changeInfo(true, 'scenarios', 'Show scenario animations.'));
+doc.getElementById('scenarios').addEventListener('mouseover', _ => changeInfo(true, 'scenarios', 'Mostrar escenarios.'));
 doc.getElementById('scenarios').addEventListener('mouseleave', _ => changeInfo(false));
 doc.getElementById('scenarios').addEventListener('click', e => changeClass(e.target));
 
-doc.getElementById('walks').addEventListener('mouseover', _ => changeInfo(true, 'walks', 'Show walking animations.'));
+doc.getElementById('walks').addEventListener('mouseover', _ => changeInfo(true, 'walks', 'Mostrar formas de caminar.'));
 doc.getElementById('walks').addEventListener('mouseleave', _ => changeInfo(false));
 doc.getElementById('walks').addEventListener('click', e => changeClass(e.target));
 
-doc.getElementById('expressions').addEventListener('mouseover', _ => changeInfo(true, 'expressions', 'Show facial expressions.'));
+doc.getElementById('expressions').addEventListener('mouseover', _ => changeInfo(true, 'expressions', 'Mostrar estados de ánimo.'));
 doc.getElementById('expressions').addEventListener('mouseleave', _ => changeInfo(false));
 doc.getElementById('expressions').addEventListener('click', e => changeClass(e.target));
 
-doc.getElementById('shared').addEventListener('mouseover', _ => changeInfo(true, 'shared', 'Show shared animations.'));
+doc.getElementById('shared').addEventListener('mouseover', _ => changeInfo(true, 'shared', 'Mostrar animaciones compartidas.'));
 doc.getElementById('shared').addEventListener('mouseleave', _ => changeInfo(false));
 doc.getElementById('shared').addEventListener('click', e => changeClass(e.target));
 
@@ -74,7 +74,7 @@ doc.getElementById('search-bar').addEventListener('input', e => {
 })
 
 
-doc.getElementById('cancel').addEventListener('mouseover', _ => changeInfo(true, 'Cancel', 'Cancel current playing animation.'));
+doc.getElementById('cancel').addEventListener('mouseover', _ => changeInfo(true, 'Cancel', 'Cancelar la animación actual.'));
 doc.getElementById('cancel').addEventListener('mouseleave', _ => changeInfo(false));
 doc.getElementById('cancel').addEventListener('click', e => {
     e.target.classList.add('pop');
@@ -86,7 +86,7 @@ doc.getElementById('cancel').addEventListener('click', e => {
     fetchNUI('cancelAnimation');
 });
 
-doc.getElementById('delete').addEventListener('mouseover', _ => changeInfo(true, 'Delete Props', 'Deletes all props if you have them stuck to you.'));
+doc.getElementById('delete').addEventListener('mouseover', _ => changeInfo(true, 'Delete Props', 'Elimina los objetos pegados a ti.'));
 doc.getElementById('delete').addEventListener('mouseleave', _ => changeInfo(false));
 doc.getElementById('delete').addEventListener('click', e => {
     e.target.classList.add('pop');
@@ -97,11 +97,11 @@ doc.getElementById('delete').addEventListener('click', e => {
     }, 300);
     fetchNUI('removeProps');
 });
-doc.getElementById('movement').addEventListener('mouseover', _ => changeInfo(true, 'Movement', 'Allows movement while playing an animation (not shared).'));
+doc.getElementById('movement').addEventListener('mouseover', _ => changeInfo(true, 'Movement', 'Permitir movimiento mientras se realiza una animación (No compartido).'));
 doc.getElementById('movement').addEventListener('mouseleave', _ => changeInfo(false));
 doc.getElementById('movement').addEventListener('click', e => (getStatus(e.target)));
 
-doc.getElementById('loop').addEventListener('mouseover', _ => changeInfo(true, 'Loop', 'Loops animations (overwrites duration in animations).'));
+doc.getElementById('loop').addEventListener('mouseover', _ => changeInfo(true, 'Loop', 'Animación en bucle (Sobrescribe la duración de la animación).'));
 doc.getElementById('loop').addEventListener('mouseleave', _ => changeInfo(false));
 doc.getElementById('loop').addEventListener('click', e => getStatus(e.target));
 

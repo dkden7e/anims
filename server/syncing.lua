@@ -11,8 +11,8 @@ RegisterNetEvent('anims:resolveAnimation', function(target, shared, accepted)
             TriggerClientEvent('anims:requestShared', target, shared.first, target, true)
             TriggerClientEvent('anims:requestShared', playerId, shared.second, tonumber(playerId))
         else
-            TriggerClientEvent('anims:notify', target, 'info', 'Player denied your request...')
-            TriggerClientEvent('anims:notify', playerId, 'info', 'Request denied')
+            TriggerClientEvent('anims:notify', target, 'info', 'El jugador negó su solicitud...')
+            TriggerClientEvent('anims:notify', playerId, 'info', 'Solicitud denegada')
         end
     end
 end)
